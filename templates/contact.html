@@ -40,7 +40,7 @@
                 <div class="col-md-8 col-xl-6">
                     <div class="sub_header_social_icon float-right">
                       <a href="#"><i class="flaticon-phone"></i>+02 213 - 256 (365)</a>
-                      <a href="#" class="register_icon"><i class="ti-arrow-right"></i>REGISTER</a>
+                        <a href="{% url 'register' %}" class="register_icon"><i class="ti-arrow-right"></i>REGISTER</a>
                     </div>
                   </div>
               </div>
@@ -57,17 +57,17 @@
 
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto">
-                                  <li class="nav-item active">
-                                      <a class="nav-link active" href="index.html">Home</a>
-                                  </li>
+                                 <li class="nav-item active">
+                                        <a class="nav-link active" href="{% url 'pole_list' %}">Главная</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a href="{% url 'about' %}" class="nav-link">Баскетбол</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{% url 'team' %}" class="nav-link">Футбол</a>
+                                    </li>
                                   <li class="nav-item">
-                                      <a href="about.html" class="nav-link">About us</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a href="team.html" class="nav-link">team</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a href="gallery.html" class="nav-link">gallery</a>
+                                      <a href="gallery.html" class="nav-link">Теннис</a>
                                   </li>
                                   <li class="nav-item dropdown">
                                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

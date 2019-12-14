@@ -17,18 +17,19 @@ class AboutPostView(ListView):
     model = Pole
     template_name = 'about.html'
 
-    def get_queryset(self):
-        return Pole.objects.exclude(status=False)
 
 
 class TeamPostView(ListView):
     model = Pole
     template_name = 'team.html'
 
-#
-# class NewsPostView(ListView):
-#     model = Pole
-#     template_name = 'news.html'
+    def get_queryset(self):
+        return Pole.objects.exclude(status=False)
+
+
+class NewsPostView(ListView):
+    model = Pole
+    template_name = 'news.html'
 
 
 class BlogPostView(ListView):
@@ -45,14 +46,17 @@ class PoleListView(ListView):
     model = Pole
     template_name = 'index.html'
 
+    def get_queryset(self):
+        return Pole.objects.exclude(status=False)
 
-#
-# class ProfileView(ListView):
-#     model = Reservation
-#     template_name = 'profile.html'
-#
-#     def get_queryset(self):
-#         return Reservation.objects.exclude(status=False)
+
+
+class ProfileView(ListView):
+    model = Reservation
+    template_name = 'profile.html'
+
+    def get_queryset(self):
+        return Reservation.objects.exclude(status=False)
 
 
 class PoleDetailView(FormView, DetailView):
@@ -78,56 +82,56 @@ class PoleDetailView(FormView, DetailView):
         return super(PoleDetailView, self).form_valid(form)
 
 
-# class PoleUpdateView(LoginRequiredMixin, UpdateView):
-#     model = Pole
-#     fields = ('title', 'body',)
-#     template_name = 'pole_edit.html'
-#     login_url = 'login'
-#
-#     def dispatch(self, request, *args, **kwargs):
-#         obj = self.get_object()
-#         if obj.author != self.request.user:
-#             raise PermissionDenied
-#         return super().dispatch(request, *args, **kwargs)
-#
-# class PoleDeleteView(LoginRequiredMixin, DeleteView):
-#     model = Pole
-#     template_name = 'pole_delete.html'
-#     success_url = reverse_lazy('pole_list')
-#     login_url = 'login'
-#
-#     def dispatch(self, request, *args, **kwargs):
-#         obj = self.get_object()
-#         if obj.author != self.request.user:
-#             raise PermissionDenied
-#         return super().dispatch(request, *args, **kwargs)
+class PoleUpdateView(LoginRequiredMixin, UpdateView):
+    model = Pole
+    fields = ('title', 'body',)
+    template_name = 'pole_edit.html'
+    login_url = 'login'
 
-#
-# class PoleCreateView(LoginRequiredMixin,CreateView):
-#     template_name = 'pole_new.html'
-#     form_class = FieldCreateForm
-#     login_url = 'login'
-#
-#     def form_valid(self, form):
-#         form.instance.author = self.request.user
-#         return super().form_valid(form)
-#
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.author != self.request.user:
+            raise PermissionDenied
+        return super().dispatch(request, *args, **kwargs)
+
+class PoleDeleteView(LoginRequiredMixin, DeleteView):
+    model = Pole
+    template_name = 'pole_delete.html'
+    success_url = reverse_lazy('pole_list')
+    login_url = 'login'
+
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.author != self.request.user:
+            raise PermissionDenied
+        return super().dispatch(request, *args, **kwargs)
+
+
+class PoleCreateView(LoginRequiredMixin,CreateView):
+    template_name = 'pole_new.html'
+    form_class = FieldCreateForm
+    login_url = 'login'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
 # class PoleCreateImageView(LoginRequiredMixin, CreateView):
 #     model = PoleImage
 #     form_class = FieldImageCreateForm
 #     template_name = 'pole_image.html'
 #     success_url = reverse_lazy('pole_list')
-#
-#
-# def to_rezerv(request):
-#     table = Pole.objects.get(pk=1)
-#     print(request)
-#     if request.method == "POST":
-#         party = request.POST.get('hello')
-#         spot = request.POST.get('date')
-#         reserv = Reservation(table=table, party=party, spot=spot)
-#         reserv.save()
-#     return render(request, 'rezerv.html', {})
+
+
+def to_rezerv(request):
+    table = Pole.objects.get(pk=1)
+    print(request)
+    if request.method == "POST":
+        party = request.POST.get('hello')
+        spot = request.POST.get('date')
+        reserv = Reservation(table=table, party=party, spot=spot)
+        reserv.save()
+    return render(request, 'rezerv.html', {})
 
 
 

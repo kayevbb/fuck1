@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bd05e10-bd73-42e5-b2a5-84db767332bb" name="Default Changelist" comment="" />
+    <list default="true" id="9bd05e10-bd73-42e5-b2a5-84db767332bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pole_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pole_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pole_new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rezerv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fieldsapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fieldsapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fieldsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fieldsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sporthub/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sporthub/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sporthub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sporthub/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/team.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -15,11 +51,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Uub1DuHVZc98eOwcMjd6RXXNmE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -72,11 +117,30 @@
       <updated>1576209209125</updated>
       <workItem from="1576209211830" duration="458000" />
       <workItem from="1576210499741" duration="1470000" />
-      <workItem from="1576214138573" duration="3566000" />
+      <workItem from="1576214138573" duration="17038000" />
+      <workItem from="1576240800157" duration="1153000" />
+      <workItem from="1576247034555" duration="1524000" />
+      <workItem from="1576257194907" duration="735000" />
+      <workItem from="1576260902130" duration="1886000" />
+      <workItem from="1576292951707" duration="17000" />
+      <workItem from="1576294000235" duration="1686000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

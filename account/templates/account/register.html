@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Создайте аккаунт{% endblock %}
+
+{% block content %}
+      <h1>Создайте аккаунт</h1>
+  <p>Пожалуйста, зарегистрируйтесь используя нижнюю форму</p>
+<div style="display: flex; justify-content: center;">
+
+  <form action="" method="post">
+    {{ user_form|crispy }}
+    {% csrf_token %}
+    <p><input type="submit" value="Create my account"></p>
+  </form>
+    </div>
+{% endblock %}

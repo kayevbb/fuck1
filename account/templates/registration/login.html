@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Войти{% endblock %}
+
+{% block content %}
+  <h1>Войти</h1>
+  {% if form.errors %}
+    <p>
+      Ваш логин и пароль не совпали.
+      Пожалуйста, повторите снова.
+    </p>
+  {% else %}
+    <p>Пожалуйста, используйте нижнюю форму чтобы войти. Если у Вас нету аккаунта <a href="{% url 'register' %}">зарегистрируйтесь сдесь</a></p>
+  {% endif %}
+  <div style="display: flex; justify-content: center;">
+    <form action="{% url 'login' %}" method="post">
+      {{ form|crispy }}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <p><input type="submit" value="Войти"></p>
+    </form>
+{#    <div class="social">#}
+{# #}
+{#  </div>#}
+  </div>
+       <ul>
+     <center> <li class="google"><a href="{% url 'social:begin' 'google-oauth2' %}">Войдите через Google</a></li></center>
+    </ul>
+      <p><a href="{% url 'password_reset' %}">Забыли Ваш пароль?</a></p>
+
+{% endblock%}

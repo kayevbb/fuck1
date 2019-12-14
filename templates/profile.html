@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="card-page__header">
+        <div class="card-page-img-container">
+            <img src="{% static 'img/prettyphoto/fr1.jpg'%}">
+        </div>
+    </div>
+    <div class="cards-container">
+    {% for reservation in object_list %}
+        <div class="card">
+            <a class="card-link" href="{% url 'pole_detail' pk=pole.pk%}">
+                <div class="card-img-container">
+                    <img src="/media/{{ pole.avatar }}">
+                </div>
+            </a>
+
+            <div class="card-info">
+                <p class="card-title">{{ reservation.party }} | {{ reservation.spot }}</p>
+                <div class="card-footer">
+                    <p class="card-avtor">
+                        <span>{{ pole.author }}</span>
+                        <span>|</span>
+                        <span>{{ pole.date }}</span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

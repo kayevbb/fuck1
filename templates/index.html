@@ -39,8 +39,30 @@
                   </div>
                   <div class="col-md-8 col-xl-6">
                       <div class="sub_header_social_icon float-right">
+                          {% if user.is_authenticated %}
+                                    <li class="login-modal">
+                                        <a href="{% url 'profile' %}" class="login"><i class="fa fa-user"></i>Профиль</a>
+                                    </li>
+                                    <li class="login-modal">
+                                        <a href="{% url 'pole_new' %}" class="login"><i class="fa fa-user"></i>Добавить поле</a>
+                                    </li>
+                                    <li class="login-modal">
+                                        <a href="{% url 'logout' %}" class="login"><i class="fa fa-user"></i>Выйти</a>
+                                    </li>
+                                {% else %}
+                                    <li class="login-modal">
+                                        <a href="{% url 'login' %}" class="login"><i class="fa fa-user"></i>Войти</a>
+                                    </li>
+                                    <li>
+                                        <div class="cart-option">
+                                            <a href="{% url 'register' %}"><i class="fa fa-shopping-cart"></i>Регистрация</a>
+                                        </div>
+                                    </li>
+                                    </ul>
                         <a href="#"><i class="flaticon-phone"></i>+02 213 - 256 (365)</a>
-                        <a href="#" class="register_icon"><i class="ti-arrow-right"></i>REGISTER</a>
+                        <a href="{% url 'register' %}" class="register_icon"><i class="ti-arrow-right"></i>REGISTER</a>
+                                                          {% endif %}
+
                       </div>
                     </div>
                 </div>
@@ -58,32 +80,17 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link active" href="{% url 'pole_list' %}">Home</a>
+                                        <a class="nav-link active" href="{% url 'pole_list' %}">Главная</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a href="{% url 'about' %}" class="nav-link">Баскетбол</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'about' %}" class="nav-link">About us</a>
+                                        <a href="{% url 'team' %}" class="nav-link">Футбол</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="{% url 'team' %}" class="nav-link">team</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link">gallery</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Pages
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="elements.html">Elements</a>
-                                            <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="blog.html" class="nav-link">blog</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.html" class="nav-link">Contact</a>
-                                    </li>
+                                  <li class="nav-item">
+                                      <a href="{% url 'blog' %}" class="nav-link">Теннис</a>
+                                  </li>
                                 </ul>
                                 <div class="header_social_icon d-none d-lg-block">
                                     <ul>
@@ -332,7 +339,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </
             </div>
         </div>
     </section>
@@ -430,7 +437,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="img/gallery/gallery_item_2.png" class="grid-item grid-item--height2 bg_img img-gal" style="background-image: url('img/gallery/gallery_item_2.png')">
+                            <a href="{% static 'img/gallery/gallery_item_2.png'%}" class="grid-item grid-item--height2 bg_img img-gal" style="background-image: url('img/gallery/gallery_item_2.png')">
                                 <div class="single_gallery_item">
                                     <div class="single_gallery_item_iner">
                                         <div class="gallery_item_text">

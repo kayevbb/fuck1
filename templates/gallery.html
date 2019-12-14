@@ -40,7 +40,7 @@
               <div class="col-md-8 col-xl-6">
                   <div class="sub_header_social_icon float-right">
                     <a href="#"><i class="flaticon-phone"></i>+02 213 - 256 (365)</a>
-                    <a href="#" class="register_icon"><i class="ti-arrow-right"></i>REGISTER</a>
+                        <a href="{% url 'register' %}" class="register_icon"><i class="ti-arrow-right"></i>REGISTER</a>
                   </div>
                 </div>
             </div>
@@ -57,34 +57,19 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link active" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="about.html" class="nav-link">About us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="team.html" class="nav-link">team</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="gallery.html" class="nav-link">gallery</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact</a>
-                                </li>
-                            </ul>
+                                    <li class="nav-item active">
+                                        <a class="nav-link active" href="{% url 'pole_list' %}">Главная</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a href="{% url 'about' %}" class="nav-link">Баскетбол</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{% url 'team' %}" class="nav-link">Футбол</a>
+                                    </li>
+                                  <li class="nav-item">
+                                      <a href="{% url 'blog' %}" class="nav-link">Теннис</a>
+                                  </li>
+                                </ul>
                             <div class="header_social_icon d-none d-lg-block">
                                 <ul>
                                     <li><a href="#"><i class="ti-facebook"></i></a></li>
